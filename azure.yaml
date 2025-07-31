@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: mosaic-toolbox
+metadata:
+  template: mosaic-toolbox@0.0.1-beta
+  description: Mosaic Toolbox - Tenant and Third Party API Management
+services:
+  web:
+    project: .
+    language: ts
+    host: staticwebapp
+    hooks:
+      prepackage:
+        shell: pwsh
+        run: npm run build
